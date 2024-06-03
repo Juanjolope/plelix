@@ -71,7 +71,7 @@
     <script src="js/search.js"></script>
     <br/>
     <footer class="bg-blue-900 py-2 text-center text-white mt-auto">
-        <p class="mb-2">© {{ date('Y') }} Juan José López Romero</p>
+        <p class="mb-2">© {{ date('Y') }} PLELIX</p>
         <p>Todos los derechos reservados.</p>
     </footer>
 </body>
