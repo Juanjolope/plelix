@@ -1,14 +1,14 @@
-#suggestions {
+#sugerencia {
     max-height: 300px;
     overflow-y: auto;
     z-index: 50;
 }
 
-.suggestion-item {
+.cajaSugerencia {
     padding: 10px;
     cursor: pointer;
 }
 
-.suggestion-item:hover {
+.cajaSugerencia:hover {
     background-color: #f3f3f3;
 }

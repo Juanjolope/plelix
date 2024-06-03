@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>@yield('title') - Portal Web de Películas</title>
-
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
 </head>
 
@@ -34,9 +34,9 @@
 
         <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
             <li class="relative mx-4">
-                <input id="movie-search" type="text" placeholder="Buscar película..."
+                <input id="buscarPelicula" type="text" placeholder="Buscar película..."
                     class="px-4 py-2 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <div id="suggestions" class="absolute bg-white text-black w-full mt-1 rounded-md shadow-lg hidden">
+                <div id="sugerencia" class="absolute bg-white text-black w-full mt-1 rounded-md shadow-lg hidden">
                 </div>
             </li>
             @if (auth()->check())

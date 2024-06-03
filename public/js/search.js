@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // obtenemos los elementos del DOM
-    const searchInput = document.getElementById('movie-search');
-    const suggestionsBox = document.getElementById('suggestions');
+    const searchInput = document.getElementById('buscarPelicula');
+    const suggestionsBox = document.getElementById('sugerencia');
 
     // evento que se lanza cuando escribimos en el cuadro de busqueda
     searchInput.addEventListener('input', async () => {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // navegamos sobre los resultados y mostrarlos como sugerencias
             results.forEach(movie => {
                 const suggestionItem = document.createElement('div');
-                suggestionItem.classList.add('suggestion-item');
+                suggestionItem.classList.add('cajaSugerencias');
                 suggestionItem.textContent = movie.title;
 
                 // lanzamos evento cuando hacemos click en alguna sugerencia y nos lleva a la vista de esa pelicula

@@ -12,8 +12,8 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class ApiController extends Controller
 {
-    private $apiKey = '46d99bb606e9ad6440b0b4aabf265921'; //clade de la API
-    private $apiUrl = 'https://api.themoviedb.org/3'; // URL de la API
+    private $apiKey = '46d99bb606e9ad6440b0b4aabf265921'; //clave de la API
+    private $apiUrl = 'https://api.themoviedb.org/3'; // URL por defecto de la API
 
     // funcion para obtener peliculas populares o destacadas
     public function getHome()
