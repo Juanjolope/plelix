@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 use App\Models\Review;
 use App\Models\Favorite;
 use Illuminate\Database\QueryException;
-use Illuminate\Pagination\LengthAwarePaginator;
+
 
 
 class ApiController extends Controller
@@ -22,7 +22,7 @@ class ApiController extends Controller
         $page = request('page', 1);
 
         // solicitud a la API para obtener películas populares
-        $response = Http::withToken('TOKEN_AQUI')
+        $response = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NmQ5OWJiNjA2ZTlhZDY0NDBiMGI0YWFiZjI2NTkyMSIsInN1YiI6IjY2NDc5NWJmYTIxZDg3MzBhNDhiYzEyYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FJrWZLOU9h30oLSMRvKu5MEfG0IyGQpkdLi53Rmp5EY')
             ->get("{$this->apiUrl}/movie/popular", [
                 'api_key' => $this->apiKey,
                 'language' => 'es-ES',

@@ -14,7 +14,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/proxima', [ApiController::class, 'getProxima'])->name('proxima');
     Route::get('/valorada', [ApiController::class, 'getValorada'])->name('valorada');
     Route::get('/pelicula/{id}', [ApiController::class, 'show'])->name('movie.show');
-    Route::get('/pelicula/{id}', [ApiController::class, 'show'])->name('movie.show');
     Route::post('/pelicula/{id}/review', [ApiController::class, 'storeReview'])->name('reviews.store');
     Route::post('/pelicula/{id}/favorite', [ApiController::class, 'storeFavorite'])->name('favorites.store');
     Route::get('/search', [ApiController::class, 'searchMovies']);
