@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Admin - Panel de Control')
+@section('title', 'Administrador - Panel de Control')
 
 @section('content')
     <div class="container mx-auto mt-12">
