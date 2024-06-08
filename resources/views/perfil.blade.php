@@ -76,14 +76,21 @@
             </div>
         </div>
 
-        <div>
-            <h2 class="text-2xl font-bold mb-4">Reseñas</h2>
-            @foreach ($reviews as $review)
-                <div class="bg-white p-4 rounded shadow-md mb-4">
-                    <p>{{ $review->review }}</p>
-                    <small class="text-gray-500">Publicado el: {{ $review->created_at->format('d/m/Y') }}</small>
-                </div>
-            @endforeach
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Críticas</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                @foreach ($reviews as $review)
+                    <div class="bg-white p-4 rounded shadow-md">
+                        <p>{{ $review->review }}</p>
+                        <small class="text-gray-500">Publicado el: {{ $review->created_at->format('d/m/Y') }}</small>
+                        <form action="{{ route('reviews.destroy', $review->id) }}" method="POST" onsubmit="return confirm('¿Seguro que quieres eliminar esta crítica?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-full">Eliminar</button>
+                        </form>
+                    </div>
+                @endforeach
+            </div>
         </div>
-    </div>
+
 @endsection

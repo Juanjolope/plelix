@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/pelicula/{id}/favorite', [ApiController::class, 'storeFavorite'])->name('favorites.store');
     Route::get('/search', [ApiController::class, 'searchMovies']);
     Route::delete('/perfil/favorite/{id}', [ApiController::class, 'destroyFavorite'])->name('favorites.destroy');
-
+    Route::delete('/reviews/{id}', [ApiController::class, 'destroyReview'])->name('reviews.destroy');
 });
 
 Route::middleware('guest')->group(function () {

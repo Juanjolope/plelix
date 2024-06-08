@@ -186,5 +186,18 @@ class ApiController extends Controller
         return redirect()->route('perfil.index')->with('error', 'No se encontró la película en tus favoritos');
     }
 
+    //funcion para eliminar una critica que ha escrito el usuario
+    public function destroyReview($id)
+    {
+        $review = Review::where('user_id', auth()->id())->where('id', $id)->first();
+
+        if ($review) {
+            $review->delete();
+            return redirect()->route('perfil.index')->with('success', 'Crítica eliminada correctamente');
+        }
+
+        return redirect()->route('perfil.index')->with('error', 'No se encontró la crítica');
+    }
+
 
 }
