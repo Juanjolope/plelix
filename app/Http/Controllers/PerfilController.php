@@ -43,7 +43,7 @@ class PerfilController extends Controller
             }
         }
 
-        // Pasar las películas favoritas y las reseñas a la vista
+        // Pasar las películas favoritas y las criticas a la vista
         return view('perfil', compact('favoriteMovies', 'reviews'));
     }
 
